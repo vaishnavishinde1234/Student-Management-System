@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet"href="/static/style.css">
+</head>
+<body>
+    <h1>Student Management System</h1>
+    <a href="/add" class="btn-back">Add New Students</a>
+    <table>
+        <tr>
+            <th>ID<th></th>Name</th><th>Email</th><th>Course</th><th>Actions</th>
+        <tr>
+        {% for student in students %}
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.course}}</td>
+            <td>
+                <a href="/edit/{{ student.id}}" class="btn-edit">Edit</a>
+                <a href="/delete/{{ student.id}}" class="btn-delete">Deletes</a>
+            </td>
+        <tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+
+
+            
+

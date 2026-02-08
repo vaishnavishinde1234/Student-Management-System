@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Student</title>
+    <link rel="stylesheet"href="/static/style.css">
+</head>
+<body>
+    <h2>Edit Student</h2>
+    <form method="POST">
+        <input type="text" name="name" value ="{{ students.name}}"required><br>
+        <input type="email" name="email" value ="{{ students.email}}"required><br>
+        <input type="text" name="course" value ="{{ students.course}}"required><br>
+        <button type ="submit">Update</button>
+        <a href="/" class="btn-back"> Back</a>
+    </form>
+</body>
+</html>
+
+

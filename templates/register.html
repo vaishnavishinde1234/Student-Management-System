@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Register Account</title>
+<head>
+<body>
+    <div>
+        Logged in as: <b>{{ user }}</b> |
+        <a href="{{ url_for('home')}}">View All Records</a> |
+        <a href="{{ url_for('logout')}}">Logout</a>
+    <div>
+
+    <h1>Register New Account</h1>
+
+    {% if message %}
+    <p style="color: red">{{ message }}</p>
+    {% endif %}
+
+    <form method="POST" action="/register">
+        Register Number: <input type="text" name="regno"><br><br>
+        First Name: <input type="text" name="fname"><br><br>
+        Last Name: <input type="text" name="lname"><br><br>
+        Account Balance: <input type="number" name="accbal" step="0.01"><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+
+    
+     
